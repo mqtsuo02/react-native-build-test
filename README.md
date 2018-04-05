@@ -27,3 +27,8 @@ react-native run-android
 If the build from the command fails, check the following.
 
 * Version of Java being set (is it 1.8 ?)
+
+## Open project with IDE
+
+* Xcode -> ios/ReactNativeBuildTest.xcodeproj
+* Android Studio -> android/
