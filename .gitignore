@@ -58,3 +58,6 @@ buck-out/
 
 # Personally added
 .watchmanconfig
+
+# temporally ignore
+ios/ReactNativeBuildTestTests/Info.plist
