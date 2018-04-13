@@ -6,11 +6,12 @@
 
 **ReactNative sample project using following framework/ librally/ tools**
 
-* react-native-cli
-* react-primitives
-* prettier
-* Bitrise
-* Fabric (Clashlytics)
+* [react-native-cli](https://facebook.github.io/react-native/)
+* [react-primitives](https://github.com/lelandrichardson/react-primitives)
+* [Next.js](https://github.com/zeit/next.js/)
+* [Prettier](https://github.com/prettier/prettier)
+* [Bitrise](https://www.bitrise.io/)
+* [Fabric (Clashlytics)](https://get.fabric.io/)
 
 ## Open project with IDE
 
