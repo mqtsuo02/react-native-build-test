@@ -58,6 +58,7 @@ buck-out/
 
 # Personally added
 .watchmanconfig
+.next
 
 # temporally ignore
 *Info.plist
