@@ -1,18 +1,12 @@
 import React, { Component } from "react"
-import { Platform } from "react-native"
 import { View, Text, StyleSheet } from "react-primitives"
-
-const instructions = Platform.select({
-  ios: "Press Cmd+R to reload,\n" + "Cmd+D or shake for dev menu",
-  android:
-    "Double tap R on your keyboard to reload,\n" +
-    "Shake or press menu button for dev menu",
-})
+import Button from "./Button"
+import Counter from "./Counter"
 
 const styles = StyleSheet.create({
   container: {
     alignItems: "center",
-    backgroundColor: "yellow",
+    backgroundColor: "#f8f9fa",
     flex: 1,
     justifyContent: "center",
   },
@@ -28,14 +22,29 @@ const styles = StyleSheet.create({
   },
 })
 
-type Props = {}
-export default class App extends Component<Props> {
+let count = 0
+
+export default class App extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      count: 0,
+    }
+  }
+
+  countUp = () => {
+    this.setState({
+      count: this.state.count + 1,
+    })
+  }
+
   render() {
     return (
       <View style={styles.container}>
         <Text style={styles.welcome}>Welcome to React Native!</Text>
         <Text style={styles.instructions}>To get started, edit App.js</Text>
-        <Text style={styles.instructions}>{instructions}</Text>
+        <Counter count={this.state.count} />
+        <Button label="Button" onCountUp={this.countUp.bind(this)} />
       </View>
     )
   }
