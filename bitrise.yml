@@ -22,6 +22,10 @@ app:
 workflows:
   test:
     steps:
+    - change-workdir@1.0.1:
+        inputs:
+        - is_create_path: 'false'
+        - path: frontend
     - npm@0.9.1:
         inputs:
         - command: install
@@ -33,6 +37,10 @@ workflows:
     - deploy-to-bitrise-io@1.3.10: {}
   build:
     steps:
+    - change-workdir@1.0.1:
+        inputs:
+        - is_create_path: 'false'
+        - path: frontend
     - npm@0.9.1:
         inputs:
         - command: install
