@@ -33,6 +33,7 @@ It is necessary to prepare the build environment by referring to the [React Nati
 ## Usage
 
 ```
+cd frontend
 npm install
 
 # Displayed by Web browser
@@ -49,5 +50,5 @@ Execution can be done from each IDE.
 
 ## Open project with IDE
 
-* Xcode -> ios/ReactNativeBuildTest.xcodeproj
-* Android Studio -> android/
+* Xcode -> frontend/ios/ReactNativeBuildTest.xcodeproj
+* Android Studio -> frontend/android/
