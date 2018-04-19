@@ -1,10 +1,12 @@
 # react-native-build-test
 
-[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
+[![Build Status](https://www.bitrise.io/app/e02bf0b2eeda7f65/status.svg?token=lCBK5xtBJnwrip9BxO1VHw&branch=master)](https://www.bitrise.io/app/e02bf0b2eeda7f65) [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 
 ## Description
 
-**ReactNative sample project using following framework/ librally/ tools**
+**sample project using following framework/ librally/ tools**
+
+### Frontend
 
 * [react-native-cli](https://facebook.github.io/react-native/)
 * [react-primitives](https://github.com/lelandrichardson/react-primitives)
@@ -12,6 +14,12 @@
 * [Prettier](https://github.com/prettier/prettier)
 * [Bitrise](https://www.bitrise.io/)
 * [Fabric (Clashlytics)](https://get.fabric.io/)
+
+### Backend
+
+* [express-graphql](https://github.com/graphql/express-graphql)
+* [CircleCI](https://circleci.com/)
+* [Google Kubernetes Engine](https://cloud.google.com/kubernetes-engine/)
 
 ## Requirements
 
