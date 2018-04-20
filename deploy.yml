@@ -1,0 +1,19 @@
+apiVersion: apps/v1beta2
+kind: Deployment
+metadata:
+  name: graphql-demo
+spec:
+  selector:
+    matchLabels:
+      app: graphql-demo
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: graphql-demo
+    spec:
+      containers:
+      - name: graphql-demo
+        image: gcr.io/GOOGLE_PROJECT_ID/IMAGE_NAME:IMAGE_VERSION
+        ports:
+        - containerPort: 4000
