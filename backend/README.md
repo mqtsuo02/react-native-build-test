@@ -1,4 +1,4 @@
-# graphql-circleci-gke
+# react-native-graphql / backend
 
 ## Case of using in local
 
