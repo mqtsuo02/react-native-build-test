@@ -5,6 +5,9 @@
 ```
 npm install
 
+# cd project root
+cd ..
+
 # create docker image
 docker build -t hoge .
 
