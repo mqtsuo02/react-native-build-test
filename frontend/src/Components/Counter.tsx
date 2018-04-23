@@ -1,4 +1,4 @@
-import React from "react"
+import * as React from "react"
 import { StyleSheet, Text, View } from "react-primitives"
 
 const style = StyleSheet.create({
@@ -17,7 +17,11 @@ const style = StyleSheet.create({
   },
 })
 
-export default props => (
+interface Props {
+  count: number
+}
+
+export default (props: Props) => (
   <View style={style.frame}>
     <Text style={style.text}>{props.count}</Text>
   </View>

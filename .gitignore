@@ -59,6 +59,7 @@ buck-out/
 # Personally added
 .watchmanconfig
 .next
+frontend/lib/
 
 # temporally ignore
 *Info.plist
