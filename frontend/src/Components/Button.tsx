@@ -21,12 +21,13 @@ const style = StyleSheet.create({
 
 interface Props {
   label: string
-  onCountUp: () => {}
+  onCountUp(): {}
 }
 
 export default (props: Props) => (
   <View
     style={style.button}
+    // @ts-ignore
     onClick={props.onCountUp}
     onTouchEnd={props.onCountUp}
   >
