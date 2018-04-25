@@ -14,6 +14,9 @@ It is necessary to prepare the build environment by referring to the [React Nati
 ```
 npm install
 
+# build TypeScript
+npm run tsc
+
 # Displayed by Web browser
 npm run dev-next
 
