@@ -1,4 +1,3 @@
-import React from "react"
-import App from "../Components/App"
+import Plane from "../lib/pages/index.js"
 
-export default () => <App />
+export default Plane

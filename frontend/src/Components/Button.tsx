@@ -1,4 +1,4 @@
-import React from "react"
+import * as React from "react"
 import { StyleSheet, Text, View } from "react-primitives"
 
 const style = StyleSheet.create({
@@ -19,9 +19,15 @@ const style = StyleSheet.create({
   },
 })
 
-export default props => (
+interface Props {
+  label: string
+  onCountUp(): {}
+}
+
+export default (props: Props) => (
   <View
     style={style.button}
+    // @ts-ignore
     onClick={props.onCountUp}
     onTouchEnd={props.onCountUp}
   >

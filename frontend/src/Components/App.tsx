@@ -1,4 +1,4 @@
-import React, { Component } from "react"
+import * as React from "react"
 import { View, Text, StyleSheet } from "react-primitives"
 import Button from "./Button"
 import Counter from "./Counter"
@@ -22,10 +22,14 @@ const styles = StyleSheet.create({
   },
 })
 
-let count = 0
+interface Props {}
 
-export default class App extends Component {
-  constructor(props) {
+interface State {
+  count: number
+}
+
+export default class App extends React.Component<Props, State> {
+  constructor(props: Props) {
     super(props)
     this.state = {
       count: 0,

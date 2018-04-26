@@ -7,7 +7,8 @@
     "test": "jest",
     "start-next": "next start",
     "build-next": "next build",
-    "dev-next": "next"
+    "dev-next": "next",
+    "tsc": "./node_modules/.bin/tsc"
   },
   "dependencies": {
     "next": "^5.1.0",
@@ -17,12 +18,34 @@
     "react-primitives": "^0.5.0"
   },
   "devDependencies": {
+    "@types/jest": "^22.2.3",
+    "@types/react": "^16.3.12",
+    "@types/react-native": "^0.55.4",
+    "@types/react-test-renderer": "^16.0.1",
     "babel-jest": "22.4.3",
     "babel-preset-react-native": "4.0.0",
     "jest": "22.4.3",
-    "react-test-renderer": "^16.3.0-alpha.0"
+    "react-test-renderer": "^16.3.0-alpha.0",
+    "ts-jest": "^22.4.4",
+    "typescript": "^2.8.3"
   },
   "jest": {
-    "preset": "react-native"
+    "preset": "react-native",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
+    "transform": {
+      "^.+\\.(js)$": "<rootDir>/node_modules/babel-jest",
+      "\\.(ts|tsx)$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$",
+    "testPathIgnorePatterns": [
+      "\\.snap$",
+      "<rootDir>/node_modules/",
+      "<rootDir>/lib/"
+    ],
+    "cacheDirectory": ".jest/cache"
   }
 }
