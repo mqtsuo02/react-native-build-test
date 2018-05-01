@@ -1,16 +1,27 @@
-var express = require("express")
-var graphqlHTTP = require("express-graphql")
-var { buildSchema } = require("graphql")
+const express = require("express")
+const graphqlHTTP = require("express-graphql")
+const { buildSchema } = require("graphql")
+const connection = require("./mysqlConnection")
 
-var schema = buildSchema(`
+const schema = buildSchema(`
   type Query {
     hello: String
   }
 `)
 
-var root = { hello: () => "Hello world!" }
+const root = { hello: () => "Hello world!" }
 
-var app = express()
+connection.connect()
+connection.query("SELECT * from userdata;", function(err, rows, fields) {
+  if (err) {
+    console.log("err: " + err)
+  }
+  console.log("name: " + rows[0].name)
+  console.log("id: " + rows[0].id)
+})
+connection.end()
+
+const app = express()
 app.use(
   "/graphql",
   graphqlHTTP({
