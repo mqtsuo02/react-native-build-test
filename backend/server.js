@@ -11,15 +11,19 @@ const schema = buildSchema(`
 
 const root = { hello: () => "Hello world!" }
 
-connection.connect()
-connection.query("SELECT * from userdata;", function(err, rows, fields) {
-  if (err) {
-    console.log("err: " + err)
-  }
-  console.log("name: " + rows[0].name)
-  console.log("id: " + rows[0].id)
-})
-connection.end()
+const getData = () => {
+  connection.connect()
+  connection.query("SELECT * from userdata;", function(err, rows, fields) {
+    if (err) {
+      console.log("err: " + err)
+    }
+    console.log("name: " + rows[0].name)
+    console.log("id: " + rows[0].id)
+  })
+  connection.end()
+
+  return "got db data"
+}
 
 const app = express()
 app.use(
@@ -30,4 +34,4 @@ app.use(
     graphiql: true,
   })
 )
-app.listen(4000, () => console.log("Now browse to localhost:4000/graphql"))
+app.listen(4000, () => console.log(getData()))
